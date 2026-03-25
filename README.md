@@ -6,6 +6,7 @@ In a quantum computer, quantum gates can be classified into two categories: *Cli
 What are the Clifford Gates? They are the elements of the Clifford group, a set of mathematical transformations that normalize the n-qubit Pauli group, i.e., map tensor products of Pauli matrices to tensor products of Pauli matrices through conjugation.
 
 If U is a Clifford gate, the conjugation operation
+
   <div align="center">
     <img src="formula/conjunction_operation.png">
   </div>
