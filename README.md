@@ -7,11 +7,6 @@ What are the Clifford Gates? They are the elements of the Clifford group, a set 
 
 If U is a Clifford gate, the conjugation operation
 
-1. Bell-states:
-   <div align="center">
-    <img src="formula/conjunction_operation.png">
-   </div>
-
-  <div align="center">
-    <img src="formula/conjunction_operation.png">
-  </div>
+<div align="center">
+  <img src="formula/conjunction_operation.png">
+</div>
