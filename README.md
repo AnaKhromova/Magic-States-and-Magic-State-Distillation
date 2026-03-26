@@ -152,3 +152,39 @@ Because the T-gate belongs to the third level of the Clifford hierarchy, it cann
 >  The Clifford hierarchy is a nested sequence of sets of quantum gates that can be fault-tolerantly performed using gate teleportation within standard
 quantum error correction schemes. The groups of Pauli and Clifford gates constitute the first and second levels, respectively. Non-Clifford gates from
 the third level or higher, such as the T-gate, are necessary for achieving fault-tolerant universal quantum computation. - The Clifford hierarchy for one qubit or qudit, https://royalsocietypublishing.org/rspa/article/481/2324/20250035/234359/The-Clifford-hierarchy-for-one-qubit-or-quditThe, [9]
+
+Higher-order magic refers to quantum states that enable non-Clifford unitaries deeper in the Clifford hierarchy. The T-gate belongs to the third level of this hierarchy, with the |T⟩-state serving as the archetypal Magic State required for its implementation. Similarly, the CCZ (and the Toffoli) gates also reside in the third level, enabling the complex logical branching necessary for universal computation. While both T and CCZ gates share the same hierarchical level, CCZ states represent a higher resource cost. A single CCZ gate effectively synthesizes the power of multiple T-gates (traditionally, a CCZ or Toffoli requires 4 to 7 T-gates to construct). Consequently, certain fault-tolerant schemes prioritize the direct distillation of these multi-qubit Magic States to optimize the space-time volume of the quantum circuit, despite the more stringent fidelity requirements involved.
+
+Magic |M⟩-state
+
+<div align="center">
+  <img src="formula/M_state.png">
+</div>
+
+
+is the Hadamard-rotated T-state (H|T⟩) and is locally Clifford-equivalent to the |H⟩ state. Applying a Hadamard gate maps the state such that H∣M⟩∝∣0⟩+exp(iπ/4)∣1⟩, effectively rotating the magic resource into the X-basis. So |M⟩ is simply the |H⟩ state rotated into the X-basis. This |M⟩-state is frequently utilized in GKP-encoded (Gottesman-Kitaev-Preskill) or bosonic protocols because specific gate teleportation routines require the ancilla to be prepared in the X-basis rather than the Z-basis. On the Bloch sphere, while the |H⟩-state typically lies on the equator (Z = 0), the |M⟩-state's Bloch vector points in the YZ-plane at a 45° angle to the Y-axis, with coordinates [0, -1/√2, 1/√2].
+
+The notion of magic can be generalized beyond a single-qubit state. The CCZ-state is a three-qubit magic state that enables the doubly-controlled-Z (CCZ) gate through gate teleportation:
+
+<div align="center">
+  <img src="formula/CCZ_state.png">
+</div>
+
+Explicitly,
+
+<div align="center">
+  <img src="formula/CCZ_state_explicitly.png">
+</div>
+
+While the T-state provides the non-Clifford kick for a single qubit, the CCZ-state provides the multi-qubit entanglement and phase-shift necessary for Toffoli-class operations. Within the Clifford hierarchy, the CCZ-state remains a Level 3 resource, but it is considered richer than a T-state because it can be used to synthesize several T-gates, making it a highly efficient resource for complex logical circuits.
+
+In the computational basis, every term of the CCZ state has a positive coefficient (+1) except for the |111⟩ term, which has a negative coefficient (-1). This specific phase pattern, a relative phase of -1 isolated on a single basis state, cannot be produced by Clifford gates alone. Because the CCZ state is a non-stabilizer state, it contains the magic resource required to perform non-Clifford operations. The CCZ gate is closely related to the Toffoli gate (CCNOT). While the CCZ applies a Z-gate to the target qubit if both controls are 1, the Toffoli applies an X-gate. Mathematically, they are Clifford-equivalent, as one can be transformed into the other simply by applying a Hadamard gate H to the target qubit:
+
+
+<div align="center">
+  <img src="formula/CCZ_Toffoli.png">
+</div>
+
+Therefore, possessing a |CCZ⟩ Magic State allows you to perform either a CCZ-gate or a Toffoli gate (which are equivalent up to surrounding Clifford Hadamards) via a process called gate teleportation. By consuming this pre-distilled Magic State, a quantum processor can execute complex logical branching and AND-gate operations without needing to perform the non-Clifford rotation directly on the data qubits, effectively bypassing the limitations of the stabilizer formalism.
+
+In quantum error correction, a fundamental trade-off exists between generic single-qubit Magic States and specialized multi-qubit resources. Constructing a Toffoli gate using only single-qubit T-states typically requires between 4 and 7 T-gates plus additional Clifford operations. In contrast, injecting a specialized, higher-order |CCZ⟩ state allows the entire operation to be performed in a single step via gate teleportation. While |CCZ⟩ states require larger and more complex distillation factories, directly distilling them is often more efficient in terms of qubit count and circuit depth. This is particularly advantageous for algorithms that rely heavily on Toffoli gates, such as quantum arithmetic or the implementation of Oracles.
