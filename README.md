@@ -31,5 +31,5 @@ For example, H is a member of a Clifford group because:
 
 Quantum circuits that consist of only Clifford gates can be efficiently simulated with a classical computer due to the Gottesman–Knill theorem, so they are not a universal set of quantum gates.
 
-Any circuit composed of CNOT, Hadamard, and phase gates can be efficiently simulated on a classical computer even though such circuits can generate huge amounts of entanglement, and can be used for superdense coding, quantum teleportation, the GHZ paradox, quantum error-correcting codes, etc.
+> Any circuit composed of CNOT, Hadamard, and phase gates can be efficiently simulated on a classical computer even though such circuits can generate huge amounts of entanglement, and can be used for superdense coding, quantum teleportation, the GHZ paradox, quantum error-correcting codes, etc.
 - Gottesmann-Knill Theorem, Scott Aaronson Lectures, 008, https://ocw.mit.edu/courses/6-845-quantum-complexity-theory-fall-2010/b50fa65352113b1368ac6e81379c913b_MIT6_845F10_lec23.pdf
