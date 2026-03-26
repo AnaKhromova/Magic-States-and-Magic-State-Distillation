@@ -98,3 +98,15 @@ While stabilizer states occupy the vertices, the H-states (H-type Magic States) 
   <img src="images_bloch_sphere/Magic_H_States_Bloch.png">
   <p style="text-align: center;"> There are 12 (green points) H-states. These are the Vertices of the Cuboctahedron. The general formula for points' coordinates is (± 1/√2, ± 1/√2, 0) (and all permutations).</p>
 </div>
+
+Standard Clifford unitary gates function as rotations within the SO(3) group (the Special Orthogonal group of 3D rotations). These operations preserve the handedness of the stabilizer octahedron, meaning they rotate it without any flipping or mirroring. However, the full stabilizer formalism, which includes the Pauli group (with phases like −1) and the operation of complex conjugation, introduces anti-unitary transformations. Complex conjugation effectively inverts the sign of the imaginary components, acting as a reflection symmetry (mirroring). This expands the symmetry group of the octahedron beyond simple rotations to include reflections, effectively allowing the octahedron to be flipped or mirrored in state space.
+
+
+##  Magic States
+Magic States are specific input states that serve as a seed/resource to enable non-Clifford operations. In the Discrete Variable (DV) domain, these are qubit-based states, while in the Continuous Variable (CV) or bosonic domain, they are non-Gaussian states. However, there is significant inconsistency in academic literature regarding the naming of T- and H-states [5]. A standard definition for the H-type state is |H⟩ = T|+⟩, which is produced by applying a T-gate to the |+⟩ stabilizer state [7]:
+
+<div align="center">
+  <img src="formula/H_magic_state.png">
+</div>
+
+
