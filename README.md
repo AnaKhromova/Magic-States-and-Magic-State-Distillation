@@ -91,3 +91,10 @@ The T-states are Magic States geometrically associated with the eight faces (fac
   <img src="images_bloch_sphere/Magic_T_States_Bloch_v2.png">
   <p style="text-align: center;"> There are 8 (blue points) T-type magic states as 8 faces of the octahedron. The coordinates correspond to the 8 corners of a Cube centered at the origin, normalized so they sit on the surface of the Bloch sphere. Since the coordinates ±(1, 1, 1) have a length of √3, we must divide by √3 to normalize them. The general formula for points' coordinates is (±1/√3, ±1/√3, ±1/√3) (and all permutations).</p>
 </div>
+
+While stabilizer states occupy the vertices, the H-states (H-type Magic States) are geometrically associated with the 12 edges of the stabilizer octahedron. In the context of Magic State Distillation (MSD) and error correction, these states define positions along the lunge-branches, the paths between the cardinal axes. While T-magic aligns with the eight corners of the dual cube (the faces), the H-structures align with the 12 midpoints of the octahedron's edges. In the broader state space, these H-structures define the geometry of the sphere surrounding the octahedron, filling the gap between the easy stabilizer points and the high-magic T-states.
+
+<div align="center">
+  <img src="images_bloch_sphere/Magic_H_States_Bloch.png">
+  <p style="text-align: center;"> There are 12 (green points) H-states. These are the Vertices of the Cuboctahedron. The general formula for points' coordinates is (± 1/√2, ± 1/√2, 0) (and all permutations).</p>
+</div>
