@@ -188,3 +188,42 @@ In the computational basis, every term of the CCZ state has a positive coefficie
 Therefore, possessing a |CCZ⟩ Magic State allows you to perform either a CCZ-gate or a Toffoli gate (which are equivalent up to surrounding Clifford Hadamards) via a process called gate teleportation. By consuming this pre-distilled Magic State, a quantum processor can execute complex logical branching and AND-gate operations without needing to perform the non-Clifford rotation directly on the data qubits, effectively bypassing the limitations of the stabilizer formalism.
 
 In quantum error correction, a fundamental trade-off exists between generic single-qubit Magic States and specialized multi-qubit resources. Constructing a Toffoli gate using only single-qubit T-states typically requires between 4 and 7 T-gates plus additional Clifford operations. In contrast, injecting a specialized, higher-order |CCZ⟩ state allows the entire operation to be performed in a single step via gate teleportation. While |CCZ⟩ states require larger and more complex distillation factories, directly distilling them is often more efficient in terms of qubit count and circuit depth. This is particularly advantageous for algorithms that rely heavily on Toffoli gates, such as quantum arithmetic or the implementation of Oracles.
+
+The Jupyter Notebook for MagicState Injection and Magic State Distillation codes in QuTip is here:
+
+
+# References
+
+[1] Qutrit magic state distillation, https://iopscience.iop.org/article/10.1088/1367-2630/14/6/063006
+
+[2] QUANTUM UNIVERSALITY BY STATE DISTILLATION,  https://www.rintonpress.com/xxqic9/qic-9-1112/1030-1052.pdf
+
+[3] Quantification and manipulation of magic states, Mehdi Ahmadi, Hoan Bui Dang, Gilad Gour, Barry C. Sanders, https://arxiv.org/abs/1706.03828
+
+[4] Stabilizers and Simulating Entanglement, https://www.dna.caltech.edu/cbsss/finalreport/entanglement_howard.pdf
+
+[5] Definition of magic T and H states: are there different definitions for them? https://quantumcomputing.stackexchange.com/questions/21172/definition-of-magic-t-and-h-states-are-there-different-definitions-for-them
+
+[6] Why are there eight T magic states and twelve H magic states? https://quantumcomputing.stackexchange.com/questions/21113/why-are-there-eight-t-magic-state-and-twelve-h-magic-states/21119#21119
+
+[7] What are magic states? https://pennylane.ai/qml/demos/tutorial_magic_states
+
+[8] Magic state distillation, https://pennylane.ai/qml/demos/tutorial_magic_state_distillation
+
+[9] The Clifford hierarchy for one qubit or qudit, https://royalsocietypublishing.org/rspa/article/481/2324/20250035/234359/The-Clifford-hierarchy-for-one-qubit-or-quditThe
+
+[10] Universal quantum computation by Clifford gates plus magic state, https://quantumcomputing.stackexchange.com/questions/23815/universal-quantum-computation-by-clifford-gates-plus-magic-state
+
+[12] Experimental demonstration of logical magic state distillation, Pedro Sales Rodriguez et al., https://arxiv.org/pdf/2412.15165
+
+[13] Sergey Bravyi and Alexei Kitaev. Universal quantum computation with ideal Clifford gates and noisy ancillas, Physical Review A, 71(2):022316, 2005
+
+[14] Experimental demonstration of logical magic state distillation, Pedro Sales Rodriguez, https://www.researchgate.net/publication/387264728_Experimental_Demonstration_of_Logical_Magic_State_Distillation
+
+[15] 'Magic' states empower error-resistant quantum computing, Emily Conover, https://www.sciencenews.org/article/magic-error-quantum-computing
+
+[16] Can you walk us through the significance of demonstrating a fully fault-tolerant universal gate set with repeatable error correction? Shival Dasu, https://www.azoquantum.com/Article.aspx?ArticleID=624
+
+[17] Breaking even with magic: demonstration of a high-fidelity logical non-Clifford gate, Shival Dasu et al., https://arxiv.org/abs/2506.14688
+
+[18] Experimental Demonstration of High-Fidelity Logical Magic States from Code Switching, Lucas Daguerre et al., https://arxiv.org/pdf/2506.14169
