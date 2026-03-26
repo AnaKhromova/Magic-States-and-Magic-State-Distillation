@@ -189,7 +189,7 @@ Therefore, possessing a |CCZ⟩ Magic State allows you to perform either a CCZ-g
 
 In quantum error correction, a fundamental trade-off exists between generic single-qubit Magic States and specialized multi-qubit resources. Constructing a Toffoli gate using only single-qubit T-states typically requires between 4 and 7 T-gates plus additional Clifford operations. In contrast, injecting a specialized, higher-order |CCZ⟩ state allows the entire operation to be performed in a single step via gate teleportation. While |CCZ⟩ states require larger and more complex distillation factories, directly distilling them is often more efficient in terms of qubit count and circuit depth. This is particularly advantageous for algorithms that rely heavily on Toffoli gates, such as quantum arithmetic or the implementation of Oracles.
 
-The Jupyter Notebook for MagicState Injection and Magic State Distillation codes in QuTip is here:
+The Jupyter Notebook for Magic State Injection and Magic State Distillation codes in QuTip is here:
 
 
 # References
