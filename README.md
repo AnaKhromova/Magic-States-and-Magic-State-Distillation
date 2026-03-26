@@ -10,3 +10,9 @@ If U is a Clifford gate, the conjugation operation
 <div align="center">
   <img src="formula/conjunction_operation.png">
 </div>
+
+where P is a Pauli operator, like X, Y, or Z, always yields another Pauli operator:
+
+<div align="center">
+  <img src="formula/Pauli_operations.png">
+</div>
