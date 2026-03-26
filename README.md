@@ -78,3 +78,16 @@ Non-stabilizer states are any states located outside the six vertices of this oc
 
 
 >  For most quantum error correction architectures, gates of the Clifford group are much simpler to implement, often using transversal operations, than their non-Clifford counterparts. - What are magic states?, Daniela Angulo, https://pennylane.ai/qml/demos/tutorial_magic_states
+
+In an error-correcting code, one logical qubit is made up of many physical qubits. An operation is transversal if you can perform a logical gate by applying the corresponding physical gate to each physical qubit independently, without any interaction between qubits within the same block. If you want to perform a CNOT between Logical Qubit A and Logical Qubit B, you apply a physical CNOT between the 1st physical qubit of A and the 1st physical qubit of B, then the 2nd of A and the 2nd of B, and so on. Crucially, physical qubits within Block A never talk to each other during the process. If one physical qubit in Block A fails, that error can only spread to one physical qubit in Block B. Since the code is designed to handle a few isolated errors, the system stays protected.
+
+Clifford gates, such as Hadamard, Phase, and CNOT, act by rotating the axes of the Bloch sphere by increments of π/2 (90°). Because the stabilizer states are the six points where these axes meet the sphere's surface, rotating the sphere by 90° (or 180°) permutes these points. Consequently, the stabilizer states form a closed set under Clifford operations; they are geometrically locked to the vertices of the octahedron and can never leak into the faces or edges without a non-Clifford gate.
+
+The T-states are Magic States geometrically associated with the eight faces (facets) of the stabilizer octahedron. They are essentially the normal projections from the origin through the center of the eight triangular faces. Since an octahedron has eight faces, there are eight distinct T-state families. Because these states lie at the points furthest from any vertex, they cannot be reached by 90° Clifford rotations, making them the essential fuel for non-classical quantum computation.
+
+
+<div align="center">
+  <img src="images_bloch_sphere/Magic_T_States_Bloch.png">
+  <img src="images_bloch_sphere/Magic_T_States_Bloch_v2.png">
+  <p style="text-align: center;"> There are 8 (blue points) T-type magic states as 8 faces of the octahedron. The coordinates correspond to the 8 corners of a Cube centered at the origin, normalized so they sit on the surface of the Bloch sphere. Since the coordinates ±(1, 1, 1) have a length of √3, we must divide by √3 to normalize them. The general formula for points' coordinates is (±1/√3, ±1/√3, ±1/√3) (and all permutations).</p>
+</div>
