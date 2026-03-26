@@ -109,4 +109,46 @@ Magic States are specific input states that serve as a seed/resource to enable n
   <img src="formula/H_magic_state.png">
 </div>
 
+where
 
+<div align="center">
+  <img src="formula/superposition_state.png">
+</div>
+
+This |H⟩-state has a relative phase exp(iπ/4), which corresponds to a vector on the equator (the XY plane) of the Bloch sphere, rotated by ϕ = π/4 (45°) from the X-axis. This is the most commonly distilled state, typically produced through protocols involving the 7-qubit Steane code or the [[5,1,3]] codes. It is important to note that T|+⟩ is mathematically equivalent to√T|0⟩ up to a Clifford correction.
+
+The magic T-states are  the eigenvectors of the operator
+
+<div align="center">
+  <img src="formula/H_magic_state_operation.png">
+</div>
+
+
+where a gate H is followed by the S gate. In the computational basis, these eigenvectors can be expressed as given in [8]:
+
+<div align="center">
+  <img src="formula/T_state.png">
+</div>
+
+T_state
+
+<div align="center">
+  <img src="formula/beta_rotation_angle.png">
+</div>
+
+The orthogonal to this state is :
+
+<div align="center">
+  <img src="formula/T_state_perp.png">
+</div>
+
+<div align="center">
+  <img src="images_bloch_sphere/Magic_T_H_State_Bloch_ad.png">
+  <p style="text-align: center;"> |H⟩-state is shown as a purple point ([1/√2, 1/√2, 0.0]), |𝑇⟩ ([1/√3, 1/√3, 1/√3]) and |𝑇⟩⊥ ([1/√3, −1/√3, 1/√3])-states are shown as the yellow points</p>
+</div>
+
+Because the T-gate belongs to the third level of the Clifford hierarchy, it cannot be implemented as a simple transversal operation in most standard codes. Instead, it requires specialized distillation protocols. A primary example is the [[5,1,3]] code, the smallest perfect code used to protect quantum data from Pauli errors. However, even this code requires Magic State Distillation to inject Level 3 operations. In contrast, more complex codes like the 15-qubit Reed-Muller code are specifically designed with the mathematical structure needed to handle these Level 3 gates transversally, highlighting the fundamental trade-off between code size and gate complexity.
+
+>  The Clifford hierarchy is a nested sequence of sets of quantum gates that can be fault-tolerantly performed using gate teleportation within standard
+quantum error correction schemes. The groups of Pauli and Clifford gates constitute the first and second levels, respectively. Non-Clifford gates from
+the third level or higher, such as the T-gate, are necessary for achieving fault-tolerant universal quantum computation. - The Clifford hierarchy for one qubit or qudit, https://royalsocietypublishing.org/rspa/article/481/2324/20250035/234359/The-Clifford-hierarchy-for-one-qubit-or-quditThe, [9]
