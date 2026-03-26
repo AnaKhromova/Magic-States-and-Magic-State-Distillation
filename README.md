@@ -57,6 +57,7 @@ The Pauli group on one qubit, G₁, is the set of operators {±I, −pm iI, ±X,
 </div>
 
 
+
 <div align="center">
   <img src="formula/Pauli_group_operations.png">
 </div>
@@ -64,3 +65,8 @@ The Pauli group on one qubit, G₁, is the set of operators {±I, −pm iI, ±X,
 The stabilizers of a state form the stabilizer group S, which is an abelian subgroup of the n-qubit Pauli group Gₙ. Conversely, any abelian subgroup of Gₙ that does not contain -I uniquely defines a stabilizer state. We explicitly exclude -I  from the stabilizer group because if -I were a stabilizer, the only solution to the eigenvalue equation −I |ψ⟩ = |ψ⟩ would be the zero vector, which is not a valid physical state.
 
 In a single-qubit system, stabilizer states correspond to the six vertices of an octahedron inscribed within the Bloch sphere. These are the eigenstates of the Pauli matrices: |0⟩ and |1⟩ (poles, Z-axis), |+⟩ and |−⟩ (X-axis) and |+i⟩ and |−i⟩ (Y-axis). While a general quantum state can exist anywhere on the sphere's surface, Clifford group operations act as rotational symmetries of this octahedron, moving states only between these six cardinal positions. Applying Clifford gates to a stabilizer state results in a discrete walk between these vertices (six points on the sphere), never landing on the points in between.
+
+<div align="center">
+  <img src="images_bloch_sphere/Stabilizer_States_Bloch.png">
+</div>
+
