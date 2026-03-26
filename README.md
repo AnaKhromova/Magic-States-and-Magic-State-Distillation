@@ -66,9 +66,10 @@ The stabilizers of a state form the stabilizer group S, which is an abelian subg
 
 In a single-qubit system, stabilizer states correspond to the six vertices of an octahedron inscribed within the Bloch sphere. These are the eigenstates of the Pauli matrices: |0⟩ and |1⟩ (poles, Z-axis), |+⟩ and |−⟩ (X-axis) and |+i⟩ and |−i⟩ (Y-axis). While a general quantum state can exist anywhere on the sphere's surface, Clifford group operations act as rotational symmetries of this octahedron, moving states only between these six cardinal positions. Applying Clifford gates to a stabilizer state results in a discrete walk between these vertices (six points on the sphere), never landing on the points in between.
 
+
 <div align="center">
   <figure>
-    <img src="images_bloch_sphere/Stabilizer_States_Bloch.png" alt="Stabilizer States on Bloch Sphere">
+    <img src="images_bloch_sphere/Stabilizer_States_Bloch.png">
     <figcaption>The Bloch sphere with the qubit stabilizer octahedron. 6 red points are 6 stabilizer states.</figcaption>
   </figure>
 </div>
