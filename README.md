@@ -68,5 +68,6 @@ In a single-qubit system, stabilizer states correspond to the six vertices of an
 
 <div align="center">
   <img src="images_bloch_sphere/Stabilizer_States_Bloch.png">
+  <figcaption>The Bloch sphere with the qubit stabilizer octahedron. 6 red points are 6 stabilizer states.</figcaption>
 </div>
 
