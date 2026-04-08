@@ -194,6 +194,8 @@ In quantum error correction, a fundamental trade-off exists between generic sing
 
 The Jupyter Notebook for Magic State Injection and Magic State Distillation codes in QuTip is here: https://github.com/AnaKhromova/Magic-States-and-Magic-State-Distillation/blob/main/magic_state_distillation.ipynb
 
+The Jupiter Notebook for Stabiliser and Non-Stabilizer States visualization on the Bloch Sphere is here: https://github.com/AnaKhromova/Magic-States-and-Magic-State-Distillation/blob/main/bloch_sphere_octahedron.ipynb
+
 
 # References
 
